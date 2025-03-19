@@ -1,5 +1,7 @@
 # Random Number Generator API
 
+![AWS, API Gateway, Lambda, SAM, Docker](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u203ktc46rizncpcn4ev.png)
+
 A serverless API built with AWS SAM (Serverless Application Model) that generates random numbers within a specified range.
 
 ## Table of Contents
