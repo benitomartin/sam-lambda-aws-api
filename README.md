@@ -4,6 +4,8 @@
 
 A serverless API built with AWS SAM (Serverless Application Model) that generates random numbers within a specified range.
 
+The project has been developed as part of the following [blog](https://medium.com/@benitomartin/build-and-deploy-a-serverless-api-with-aws-sam-lambda-gateway-and-docker-35bbb4167439)
+
 ## Table of Contents
 
 - [Project Structure](#project-structure)
