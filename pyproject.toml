@@ -1,0 +1,10 @@
+[project]
+name = "sam-lambda-aws-api"
+version = "0.1.0"
+description = "A serverless API built with AWS SAM (Serverless Application Model) that generates random numbers within a specified range."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Benito Martin"}
+]
+

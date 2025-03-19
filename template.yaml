@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Random Number Generator API
+
+Resources:
+  RandomNumberGeneratorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.11
+      CodeUri: lambda/
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /generate-random
+            Method: post
+            RestApiId: !Ref ApiGateway
+
+  ApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: dev
+      EndpointConfiguration: REGIONAL
+      Cors:
+        AllowMethods: "'*'"
+        AllowHeaders: "'Content-Type,Authorization'"
+        AllowOrigin: "'*'"
+
+Outputs:
+  ApiEndpoint:
+    Value: !Sub https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/generate-random
+    Description: API Gateway endpoint URL for the Random Number Generator
+
+
