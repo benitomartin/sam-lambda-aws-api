@@ -24,13 +24,13 @@ Resources:
       StageName: dev
       EndpointConfiguration: REGIONAL
       Cors:
-        AllowMethods: "'*'"
+        AllowMethods: "'*'" # Used methods: "'POST,OPTIONS'"
         AllowHeaders: "'Content-Type,Authorization'"
         AllowOrigin: "'*'"
 
 Outputs:
   ApiEndpoint:
-    Value: !Sub https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/generate-random
+    Value: !Sub https://${ApiGateway}.execute-api.${AWS::Region}.amazonaws.com/dev/generate-random
     Description: API Gateway endpoint URL for the Random Number Generator
 
 
