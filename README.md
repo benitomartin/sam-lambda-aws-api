@@ -46,6 +46,8 @@ A serverless API built with AWS SAM (Serverless Application Model) that generate
     sam build
     ```
 
+    This will create a `.aws-sam` directory with the built artifacts.
+
 4. Validate SAM template:
 
     ```bash
