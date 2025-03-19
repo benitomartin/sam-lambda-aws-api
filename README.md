@@ -10,6 +10,8 @@ A serverless API built with AWS SAM (Serverless Application Model) that generate
 │   └── requirements.txt
 ├── .gitignore
 ├── .python-version
+├── LICENSE
+├── README.md
 ├── pyproject.toml
 ├── template.yaml
 └── uv.lock
