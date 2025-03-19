@@ -1,4 +1,4 @@
-# Random Number Generator API
+# Serverless API with AWS SAM, Lambda, Gateway and Docker
 
 ![AWS, API Gateway, Lambda, SAM, Docker](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u203ktc46rizncpcn4ev.png)
 
