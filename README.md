@@ -2,6 +2,16 @@
 
 A serverless API built with AWS SAM (Serverless Application Model) that generates random numbers within a specified range.
 
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Prerequisites](#prerequisites)
+- [Setup and Installation](#setup-and-installation)
+- [Testing the Function Locally](#testing-the-function-locally)
+- [Deployment to AWS](#deployment-to-aws)
+- [Clean Up](#clean-up)
+- [License](#license)
+
 ## Project Structure
 
 ```.
@@ -54,21 +64,23 @@ A serverless API built with AWS SAM (Serverless Application Model) that generate
     sam validate
     ```
 
-5. Invoke Function:
+## Testing the Function Locally
 
-    ```bash
-    sam local invoke RandomNumberGeneratorFunction
-    ```
-    Response:
-    ```json
-    {
-        "random_number": 34
-    }
-    ```
+To invoke the function locally you need to activate Docker and run the following command. This will create a local AWS lambda Docker image, invoke the function and return the response.
 
-## Local Testing of the API
+```bash
+sam local invoke RandomNumberGeneratorFunction
+```
 
-Start the API locally:
+Response:
+
+```json
+{
+    "random_number": 34
+}
+```
+
+Alternatively, you can start the API locally and send requests to it. Here also Docker must be running and again a local AWS lambda image will be created.
 
 ```bash
 sam local start-api
@@ -80,8 +92,8 @@ Send a POST request from a new terminal to generate a random number:
 
 ```bash
 curl -X POST http://127.0.0.1:3000/generate-random \
-  -H "Content-Type: application/json" \
-  -d '{"min": 1, "max": 100}'
+-H "Content-Type: application/json" \
+-d '{"min": 1, "max": 100}'
 ```
 
 **Response:**
@@ -100,7 +112,7 @@ Deploy the app to your AWS account:
 sam deploy --guided
 ```
 
-![Deploymentsam dele](https://github.com/user-attachments/assets/242fe9ad-9bde-4446-bd12-e173fab36d19)
+![Deployment via sam deploy --guided](https://github.com/user-attachments/assets/242fe9ad-9bde-4446-bd12-e173fab36d19)
 
 Test the deployed function with the given endpoint and the StageName (`dev`) of the template:
 
